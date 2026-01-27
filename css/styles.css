@@ -16,6 +16,10 @@ h1, h2, h3 {
     font-family: "Montserrat", sans-serif;
 }
 
+body {
+    background-color: #cccccc;
+}
+
 /* Header Styles */
 
 header {
@@ -154,6 +158,144 @@ button:hover {
         cursor: pointer;
     }
 
+.home {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0;
+        background: #ffffff;
+    }
+
+.new-arrivals
+.categories {
+        background: #ffffff;
+        width: min(1100px, 100%);
+        margin: 0 auto;
+        padding: 25px;
+        border radius: 8px;
+    }
+
+.product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin: 20px 0;
+    }
+
+.product-card {
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 15px;
+        text-align: center;
+    }
+
+.product-card img {
+        width: 100%;
+        height: 220px;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+.cta-button {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 12px 30px;
+        border-radius: 8px;
+        background: #FF6B35;
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+}
+
+.cta-button:hover {
+        background-color: #D33C05;
+        cursor: pointer;
+    }
+
+.category-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin-top: 20px;
+    }
+
+.category-card {
+        position: relative;
+        display: block;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 170px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+.category-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+.category-card span {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        text-align: center;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.25);
+    }
+
+.newsletter {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+        text-align: center;
+        padding: 25px 15px 45px;
+    }
+
+.newsletter-form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+.newsletter-form input {
+        padding: 10px 12px;
+        border-radius: 6px;
+        border: 1px solid #aaaaaa;
+        width: 260px;
+    }
+
+.newsletter-form button {
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: none;
+      background: #12455E;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+.newsletter-form button:hover {
+        background-color: #0B2C3C;
+    }
+
+.sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
 
 /* Footer Styles */
 
