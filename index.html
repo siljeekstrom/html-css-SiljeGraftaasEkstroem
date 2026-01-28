@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <body>
         <header>
             <a href="index.html" class="logo"><img src="pictures/RainyDays_Logo.png" alt="Rainy Days Logo"></a>
-            <nav>
+            <nav aria-label="Primary Navigation">
                 <ul class="nav-links">
                     <li><a href="products.html">Shop</a></li>
                     <li><a href="about.html">About</a></li>
@@ -20,21 +20,21 @@
             <div class="header-buttons">
                 <button type="button" class="button-icon button-search">
                     Search
-                    <img src="icons/search-icon.png" alt="Search Icon" class="button-icon-image"></button>
+                    <img src="icons/search-icon.png" alt="" aria-hidden="true" class="button-icon-image"></button>
                 <button type="button" class="button-icon button-cart"> 
                     Cart
-                    <img src="icons/cart-icon.png" alt="Cart Icon" class="button-icon-image"></button>
+                    <img src="icons/cart-icon.png" alt="" aria-hidden="true" class="button-icon-image"></button>
             </div>
         </header>
         <main class="home">
             <section class="hero">
                 <div class="hero-content">
-                    <h1> Pushing the Comfort Zone</h1>
+                    <h1>Pushing the Comfort Zone</h1>
                     <a href="products.html" class="hero-shop-button">Shop Now</a>
                 </div>
             </section>
-            <section class="new-arrivals">
-                <h2>New arrivals</h2>
+            <section class="new-arrivals" aria-labelledby="new-arrivals-title">
+                <h2 id="new-arrivals-title">New arrivals</h2>
                 <div class="product-grid">
                     <article class="product-card">
                         <img src="pictures/avalanche-pro.png" alt="Avalance Pro Jacket">
@@ -54,29 +54,29 @@
                 </div>
                 <a href="products.html" class="cta-button">Explore all jackets</a>
             </section>
-            <section class="categories">
-                <h2>Shop by Category</h2>
+            <section class="categories" aria-labelledby="categories-title">
+                <h2 id="categories-title">Shop by Category</h2>
                 <div class="category-grid">
                   <a href="products.html" class="category-card">
                     <img src="pictures/hiking.jpg" alt="Hiking and trekking category">
-                    <span>Hiking & Trekking</span>
+                    <span>Hiking &amp; Trekking</span>
                   </a>
                   <a href="products.html" class="category-card">
                     <img src="pictures/city.jpg" alt="City and everyday category">
-                    <span>City & Everyday</span>
+                    <span>City &amp; Everyday</span>
                   </a>
                   <a href="products.html" class="category-card">
                     <img src="pictures/ski.jpg" alt="Ski and winter category">
-                    <span>Ski & Winter</span>
+                    <span>Ski &amp; Winter</span>
                   </a>
                   <a href="products.html" class="category-card">
                     <img src="pictures/camping.jpg" alt="Camping and travel category">
-                    <span>Camping & Travel</span>
+                    <span>Camping &amp; Travel</span>
                   </a>
                 </div>
                 </section>
-                <section class="newsletter">
-                    <h2>Stay dry. Stay inspired.</h2>
+                <section class="newsletter" aria-labelledby="newsletter-title">
+                    <h2 id="newsletter-title">Stay dry. Stay inspired.</h2>
                     <p>Join our newsletter for outdoor stories, new arrivals and exclusive offers.</p>
                     <form class="newsletter-form">
                         <label class="sr-only" for="email">Email</label>
@@ -98,10 +98,10 @@
                         </ul>
                     </div>
                     <div>
-                        <h3>Help & Support</h3>
+                        <h3>Help &amp; Support</h3>
                         <ul class="footer-links">
-                        <li>Shipping & delivery</li>
-                        <li>Returns & Refunds</li>
+                        <li>Shipping &amp; delivery</li>
+                        <li>Returns &amp; Refunds</li>
                         <li>Size guide</li>
                         <li>FAQ</li>
                         </ul>
@@ -109,17 +109,17 @@
                     <div>
                         <h3>Contact</h3>
                         <ul class="footer-links">
-                        <li>hello@rainydays.com</li>
-                        <li>+47 400 00 000</li>
+                        <li><a href="mailto:hello@rainydays.com">hello@rainydays.com</a></li>
+                        <li><a href="tel:+4740000000">+47 400 00 000</a></li>
                         <li>Rainy Days HQ, Oslo, Norway</li>
                         </ul>
                     </div>
                     <div>
                         <h3>Follow us</h3>
                         <ul class="footer-links">
-                        <li><img src="icons/instagram-icon.png" alt="Instagram Icon" class="social-icon">Instagram</li>
-                        <li><img src="icons/facebook-icon.png" alt="Facebook Icon" class="social-icon">Facebook</li>
-                        <li><img src="icons/tiktok-icon.png" alt="TikTok Icon" class="social-icon">TikTok</li>
+                        <li><img src="icons/instagram-icon.png" alt="" aria-hidden="social-icon">Instagram</li>
+                        <li><img src="icons/facebook-icon.png" alt="" aria-hidden="social-icon">Facebook</li>
+                        <li><img src="icons/tiktok-icon.png" alt="" aria-hidden="social-icon">TikTok</li>
                     </ul>
                     </div>
                 </div>
@@ -132,3 +132,4 @@
           </div>
         </footer>
     </body>
+</html>
