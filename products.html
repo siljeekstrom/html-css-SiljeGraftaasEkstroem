@@ -7,12 +7,13 @@
       <title>Rainy Days | Products</title>
       <link href="css/styles.css" rel="stylesheet" type="text/css">
     </head>
+
     <body>
         <header>
             <a href="index.html" class="logo"><img src="pictures/RainyDays_Logo.png" alt="Rainy Days Logo"></a>
             <nav aria-label="Primary Navigation">
                 <ul class="nav-links">
-                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="products.html" class="active">Shop</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -26,95 +27,107 @@
                     <img src="icons/cart-icon.png" alt="" aria-hidden="true" class="button-icon-image"></a>
             </div>
         </header>
+
         <main class="products-page">
             <nav class="breadcrumb" aria-label="breadcrumb">
             <a href="index.html">Home</a>
-            <span aria-hidden="true"></span>
-            <span>Shop</span>
+            <span class="breadcrumb-separator" aria-hidden="true">▶</span>
+            <span class="breadcrumb-current">Shop</span>
             </nav>
+
         <section class="products-container" aria-labelledby="products-title">
             <header class="products-header">
                 <h1 id="products-title">All jackets</h1>
-                <p> Functional, durable and weatherproof - designed to perform in every condition</p>
+                <p> Functional, durable and weatherproof - designed to perform in every condition.</p>
             </header>
             <div class="products-toolbar">
                 <p class="products-count">7 products</p>
             <div class="products-sort">
-                <label for="sort">Sort by</label>
-            <select id="sort" name="sort"
-              <option value="featured">Featured</option>
-              <option value="new">Newest</option>
-              <option value="low">Price: Low to high</option>
-              <option value="high">Price High to low</option>
-            </select>
-                </div>
-                </div>
-                <div class="product-grid">
+                <span>Sort by</span>
+            </div>
+            </div>
+            
+            <div class="product-grid">
+            <div class="product-tile">
                     <article class="product-card product-card--shop">
                         <span class="badge-new">New</span>
                         <img src="pictures/avalanche-pro.png" alt="Avalance Pro Jacket">
                         <div class="product-info">
                         <h3>Avalance Pro</h3>
-                        <p class="price">2795 kr</p>
+                        <p class="price">2 795 kr</p>
                     </div>
-                    <a class="product-button" href="productdetail.html"> View details</a>
                     </article>
-                    <div class="product-grid">
+                    <a class="product-button" href="productdetail.html"> View details</a>
+                </div>
+
+                <div class="product-tile">
                     <article class="product-card product-card--shop">
                         <span class="badge-new">New</span>
                         <img src="pictures/zephyr-shell.png" alt="Zephyr Shell">
                         <div class="product-info">
                         <h3>Zephyr Shell</h3>
-                        <p class="price">2295 kr</p>
+                        <p class="price">2 295 kr</p>
                     </div>
-                    <a class="product-button" href="productdetail.html"> View details</a>
                     </article>
-                    <div class="product-grid">
+                    <a class="product-button" href="productdetail.html"> View details</a>
+                </div>
+
+                <div class="product-tile">
                     <article class="product-card product-card--shop">
                         <span class="badge-new">New</span>
                         <img src="pictures/velocity-windbreaker.png" alt="Velocity Windbreaker">
                         <div class="product-info">
                         <h3>Velocity Windbreaker</h3>
-                        <p class="price">2495 kr</p>
+                        <p class="price">2 495 kr</p>
                     </div>
-                    <a class="product-button" href="productdetail.html"> View details</a>
                     </article>
-                    <div class="product-grid">
+                    <a class="product-button" href="productdetail.html"> View details</a>
+                </div>
+
+                <div class="product-tile">
                     <article class="product-card product-card--shop">
                         <img src="pictures/stratus-bomber.png" alt="Stratur Bomber">
                         <div class="product-info">
                         <h3>Stratus Bomber</h3>
-                        <p class="price">2695 kr</p>
+                        <p class="price">2 695 kr</p>
                     </div>
-                    <a class="product-button" href="productdetail.html"> View details</a>
                     </article>
-                    <div class="product-grid">
+                    <a class="product-button" href="productdetail.html"> View details</a>
+                </div>
+
+                <div class="product-tile">
                     <article class="product-card product-card--shop">
                         <img src="pictures/apex-tour-jacket.png" alt="Apex Tour Jacket">
                         <div class="product-info">
                         <h3>Apex Tour Jacket</h3>
-                        <p class="price">3195 kr</p>
+                        <p class="price">3 195 kr</p>
                     </div>
-                    <a class="product-button" href="productdetail.html"> View details</a>
                     </article>
-                    <div class="product-grid">
+                    <a class="product-button" href="productdetail.html"> View details</a>
+                </div>
+
+                <div class="product-tile">
                     <article class="product-card product-card--shop">
                         <img src="pictures/ridge-armour-gtx.png" alt="Ridge Armour GTX">
                         <div class="product-info">
                         <h3>Ridge Armour GTX</h3>
-                        <p class="price">3495 kr</p>
+                        <p class="price">3 495 kr</p>
                     </div>
-                    <a class="product-button" href="productdetail.html"> View details</a>
                     </article>
-                    <div class="product-grid">
+                    <a class="product-button" href="productdetail.html"> View details</a>
+                </div>
+
+                <div class="product-tile">
                     <article class="product-card product-card--shop">
                         <img src="pictures/timberline-fleece.png" alt="Timberline Fleece">
                         <div class="product-info">
                         <h3>Timberline Fleece</h3>
-                        <p class="price">2095 kr</p>
+                        <p class="price">2 095 kr</p>
                     </div>
-                    <a class="product-button" href="productdetail.html"> View details</a>
                     </article>
+                    <a class="product-button" href="productdetail.html"> View details</a>
+                </div>
+            </div>
             </section>
                 <section class="newsletter" aria-labelledby="newsletter-title">
                     <h2 id="newsletter-title">Stay dry. Stay inspired.</h2>
