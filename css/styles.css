@@ -69,11 +69,19 @@ h1, h2, h3 {
 /* Header */
 body > header {
     background-color: var(--color-header);
-    padding: var(--space-2) 100px;
-    display: flex;
-    justify-content: space-between;
+    display: block;
     align-items: center;
     min-height: 140px;
+}
+
+.header-inner {
+    width: min(var(--container), 100%);
+    margin: 0 auto;
+    padding: var(--space-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .logo img {
@@ -519,7 +527,6 @@ footer p {
 }
 
 .products-page .product-grid {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 18px;
     margin: 0;
@@ -536,7 +543,7 @@ footer p {
 
 .products-page .product-card--shop img {
     height: 200px;
-    margin: 25px 0 6px;
+    margin: 20px 0 6px;
     object-fit: contain;
 }
 
@@ -572,7 +579,7 @@ footer p {
 .breadcrumb-separator {
     font-size: 0.55rem;
     opacity: 0.9;
-    transform: scaleX(00.75);
+    transform: scaleX(0.75);
     display: inline-block;
     line-height: 1;
 }
@@ -602,7 +609,6 @@ footer p {
 .products-header h1 {
     text-transform: uppercase;
     font-size: 2.3rem;
-
     letter-spacing: 0.6px;
     margin-bottom: 10px;
     font-family: var(--font-heading);
@@ -622,8 +628,7 @@ footer p {
     align-items: center;
     justify-content: space-between;
     margin: 26px 0 12px;
-    padding-left: 2px;
-    padding-right: 3px;
+    padding: 0;
 }
 
 .products-count {
@@ -664,13 +669,14 @@ footer p {
 
 /* Text sizing */
 .products-page .product-card--shop h3 {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600; 
     min-height: auto;
     margin: 0;
 }
 
 .products-page .product-card--shop .price {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     margin: 2px 0 0;
 }
 
@@ -683,7 +689,7 @@ footer p {
     text-decoration: none;
     text-transform: uppercase;
     font-family: var(--font-heading);
-    font-size: 0.62rem;
+    font-size: 0.75rem;
     letter-spacing: 0.3px;
     background-color: #12455E;
     color: var(--color-white);
