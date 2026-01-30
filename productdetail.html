@@ -30,7 +30,8 @@
             </div>
         </header>
 
-        <main class="products-page">
+        <main class="product-detail-page">
+
             <nav class="breadcrumb" aria-label="breadcrumb">
             <a href="index.html">Home</a>
             <span class="breadcrumb-separator" aria-hidden="true">▶</span>
@@ -39,10 +40,122 @@
             <span class="breadcrumb-current">Avalanche Pro</span>
             </nav>
 
-        <section class="product-detail-container">
-            <div class="product-detail-image">
-                <img src="pictures/avalanche-pro.png" alt="Avalanche Pro Jacket">
+        <section class="product-detail" aria-labelledby="product-title">
+            <div class="product-detail-grid">
+
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                    <img src="pictures/avalanche-pro.png" alt="Avalanche Pro Jacket" class="product-main-image">
+                    </div>
+
+                    <div class="product-thumbnails" aria-label="Product images">
+                        <button type="button" class="thumb is-active" aria-label="Show image 1">
+                        <img src="pictures/avalanche-pro-detail-1.png" alt="">
+                        </button>
+                        <button type="button" class="thumb" aria-label="Show image 2">
+                        <img src="pictures/avalanche-pro-detail-2.png" alt="">
+                        </button>
+                        <button type="button" class="thumb" aria-label="Show image 3">
+                        <img src="pictures/avalanche-pro-detail-3.png" alt="">
+                        </button>
+                        </div>
+                    </div>
+
+                <div class="product-details">
+                    <h1 id="product-title">Avalanche Pro</h1>
+                    <div class="product-meta">
+                    <p class="product-price">2795 kr</p>
+
+                    <div class="product-rating" aria-label="4 out of 5 stars, 67 reviews">
+                        <span class="star" aria-hidden="true">★★★★☆</span>
+                        <span class="reviews">67 reviews</span>
+                    </div>
+                    </div>
+
+                    <p class="product-description">Built for harsh conditions at sea or in the mountains. High-visibility panels and waterproof protection keep you safe and dry wherever the storm takes you.</p>
+                    
+                    <div class="option-block">
+                        <p class="option-label">Color:</p>
+                        <div class="swatches" role="group" aria-label="Choose color">
+                            <button type="button" class="swatch swatch-orange is-selected" aria-label="Orange"></button>
+                            <button type="button" class="swatch swatch-blue" aria-label="Blue"></button>
+                            <button type="button" class="swatch swatch-green" aria-label="Green"></button>
+                        </div>
+                    </div>
+
+                    <div class="option-block">
+                        <p class="option-label">Choose your size</p>
+                        <div class="sizes" role="group" aria-label="Choose size">
+                            <button type="button" class="size">xs</button>
+                            <button type="button" class="size">s</button>
+                            <button type="button" class="size is-selected">m</button>
+                            <button type="button" class="size">l</button>
+                            <button type="button" class="size">xl</button>
+                            <button type="button" class="size">xxl</button>
+                        </div>
+                    </div>
+
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+
+                    <div class="info-list">
+                        <div class="info-item">
+                            <img src="icons/delivery-truck.png" alt="" aria-hidden="true" class="info-icon">
+                            <div>
+                                <p class="info-title">Delivery within 3–5 business days (Norway &amp; Scandinavia)</p>
+                                <p class="info-subtitle">Express delivery available at checkout</p>
+                                <p class="info-subtitle">Free standard shipping on all orders over 1 500 kr</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <img src="icons/return.png" alt="" aria-hidden="true" class="info-icon">
+                            <div>
+                                <p class="info-title">Easy 30-day return policy</p>
+                                <p class="info-subtitle">Free return shipping on exchanges</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section class="recommendations" aria-labelledby="recommendations-title">
+            <h2 id="recommendations-title">You may also like</h2>
+
+            <div class="producst-grid recommendations-grid">
+                <a href="productdetail.html" class="product-tile">
+                    <article class="product-card">
+                        <img src="pictures/timberline-fleece.png" alt="Timberline Fleece Jacket">
+                        <div class="product-info">
+                        <h3>Timberline Fleece</h3>
+                        <p class="price">2 095 kr</p>
+                    </div>
+                    </article>
+                </a>
+
+                <a href="productdetail.html" class="product-tile">
+                    <article class="product-card">
+                        <img src="pictures/zephyr-shell.png" alt="Zephyr Shell Jacket">
+                        <div class="product-info">
+                        <h3>Zephyr Shell</h3>
+                        <p class="price">2 295 kr</p>
+                        </div>
+                    </article>
+                </a>
+
+                <div class="producst-grid recommendations-grid">
+                <a href="productdetail.html" class="product-tile">
+                    <article class="product-card">
+                        <img src="pictures/apex-tour-jacket.png" alt="Apex Tour Jacket">
+                        <div class="product-info">
+                        <h3>Apex Tour Jacket</h3>
+                        <p class="price">3 195 kr</p>
+                    </div>
+                    </article>
+                </a>
+            </div>
+        </section>
+        </main>
 
         <footer>
             <img src="pictures/RainyDays_Logo.png" alt="Rainy Days Logo" class="footer-logo">
