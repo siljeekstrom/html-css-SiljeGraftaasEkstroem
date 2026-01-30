@@ -699,3 +699,29 @@ footer p {
     background-color: #0B2C3C;
 }
 
+.product-tile {
+    position: relative;
+}
+
+.product-card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: var(--radius-s);
+    cursor: pointer;
+}
+
+.product-button {
+    position: relative;
+    z-index: 2;
+}
+
+.product-card--shop img {
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform: scale(1);
+    will-change: transform;
+}
+
+.product-tile:hover .product-card--shop img{
+    transform: scale(1.05);
+}
