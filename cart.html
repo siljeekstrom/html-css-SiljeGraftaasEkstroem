@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,12 @@
       <title>Rainy Days | Cart</title>
       <link href="css/styles.css" rel="stylesheet" type="text/css">
     </head>
+
     <body>
         <header>
+            <div class="header-inner">
             <a href="index.html" class="logo"><img src="pictures/RainyDays_Logo.png" alt="Rainy Days Logo"></a>
-            <nav>
+            <nav aria-label="Primary Navigation">
                 <ul class="nav-links">
                     <li><a href="products.html">Shop</a></li>
                     <li><a href="about.html">About</a></li>
@@ -20,12 +22,36 @@
             <div class="header-buttons">
                 <button type="button" class="button-icon button-search">
                     Search
-                    <img src="../icons/search-icon.png" alt="Search Icon" class="button-icon-image"></button>
-                <button type="button" class="button-icon button-cart"> 
+                    <img src="icons/search-icon.png" alt="" aria-hidden="true" class="button-icon-image"></button>
+               <a href="cart.html" class="button-icon button-cart"> 
                     Cart
-                    <img src="../icons/cart-icon.png" alt="Cart Icon" class="button-icon-image"></button>
+                    <img src="icons/cart-icon.png" alt="" aria-hidden="true" class="button-icon-image"></a>
+            </div>
             </div>
         </header>
+
+        <main class="cart-page">
+
+            <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator" aria-hidden="true">▶</span>
+            <a href="products.html">Shop</a>
+            <span class="breadcrumb-separator" aria-hidden="true">▶</span>
+            <span class="breadcrumb-current">Cart</span>
+            </nav>
+
+
+                <section class="newsletter" aria-labelledby="newsletter-title">
+                    <h2 id="newsletter-title">Stay dry. Stay inspired.</h2>
+                    <p>Join our newsletter for outdoor stories, new arrivals and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <label class="sr-only" for="email">Email</label>
+                        <input id="email" type="email" placeholder="you@example.com" required>
+                        <button type="submit" class="cta-button">Subscribe</button>
+                    </form>
+                </section>
+            </main>
+            
         <footer>
             <img src="pictures/RainyDays_Logo.png" alt="Rainy Days Logo" class="footer-logo">
                 <div class="footer-content">
@@ -39,10 +65,10 @@
                         </ul>
                     </div>
                     <div>
-                        <h3>Help & Support</h3>
+                        <h3>Help &amp; Support</h3>
                         <ul class="footer-links">
-                        <li>Shipping & delivery</li>
-                        <li>Returns & Refunds</li>
+                        <li>Shipping &amp; delivery</li>
+                        <li>Returns &amp; Refunds</li>
                         <li>Size guide</li>
                         <li>FAQ</li>
                         </ul>
@@ -50,17 +76,17 @@
                     <div>
                         <h3>Contact</h3>
                         <ul class="footer-links">
-                        <li>hello@rainydays.com</li>
-                        <li>+47 400 00 000</li>
+                        <li><a href="mailto:hello@rainydays.com">hello@rainydays.com</a></li>
+                        <li><a href="tel:+4740000000">+47 400 00 000</a></li>
                         <li>Rainy Days HQ, Oslo, Norway</li>
                         </ul>
                     </div>
                     <div>
                         <h3>Follow us</h3>
                         <ul class="footer-links">
-                        <li><img src="../icons/instagram-icon.png" alt="Instagram Icon" class="social-icon">Instagram</li>
-                        <li><img src="../icons/facebook-icon.png" alt="Facebook Icon" class="social-icon">Facebook</li>
-                        <li><img src="../icons/tiktok-icon.png" alt="TikTok Icon" class="social-icon">TikTok</li>
+                        <li><img src="icons/instagram-icon.png" alt="" aria-hidden="true" class="social-icon">Instagram</li>
+                        <li><img src="icons/facebook-icon.png" alt="" aria-hidden="true" class="social-icon">Facebook</li>
+                        <li><img src="icons/tiktok-icon.png" alt="" aria-hidden="true" class="social-icon">TikTok</li>
                     </ul>
                     </div>
                 </div>
@@ -73,3 +99,4 @@
           </div>
         </footer>
     </body>
+</html>
