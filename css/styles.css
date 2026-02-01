@@ -66,7 +66,27 @@ h1, h2, h3 {
     margin: 0 0 var(--space-2) 0;
 }
 
-/* Header */
+/* Utilities / Helpers */
+.sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+.two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+
+/* Header + Navigation */
 body > header {
     background-color: var(--color-header);
     display: block;
@@ -127,7 +147,7 @@ header nav a.active {
     text-underline-offset: 6px;
 }
 
-/* Buttons */
+/* Buttons + Focus */
 button {
         font-family: var(--font-heading);
         font-weight: 500;
@@ -156,13 +176,7 @@ button:hover {
         justify-content: space-between;
         padding: 10px 18px;
         border-radius: var(--radius-pill);
-        background-color: #f7fbff;
-        border: 1px solid #f7fbff;
-        font-family: var(--font-heading);
-        font-weight: 500;
-        font-size: 1.1em;
         text-align: left;
-        cursor: pointer;
         text-decoration: none;
         color: var(--color-text);
     }
@@ -186,7 +200,7 @@ a:focus-visible, button:focus-visible {
     border-radius: var(--radius-s);
 }
 
-/* Hero */
+/* Home page sections */
 .hero {
         height: 530px;
         display: flex;
@@ -244,15 +258,6 @@ a:focus-visible, button:focus-visible {
         padding: 12px 30px;
 }
 
-.new-arrivals .cta-button {
-        margin: 25px auto 10px;
-        padding: 14px 40px;
-        border-radius: var(--radius-m);
-        font-size: 1.3rem;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-    }
-
 /* Layout section */
 .home {
         display: flex;
@@ -270,7 +275,16 @@ a:focus-visible, button:focus-visible {
         font-family: var(--font-body);
     }
 
-/* Product cards (shared: index + products page) */
+.new-arrivals .cta-button {
+        margin: 25px auto 10px;
+        padding: 14px 40px;
+        border-radius: var(--radius-m);
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+/* Products (grid + cards) */
 .product-grid {
         display: grid;
         gap: 18px;
@@ -385,7 +399,7 @@ a:focus-visible, button:focus-visible {
     color: var(--color-accent);
 }
 
-/* Products page container + header */
+/* Products page layout */
 .products-container {
     width: min(var(--container), 100%);
     margin: 0 auto;
@@ -544,19 +558,6 @@ a:focus-visible, button:focus-visible {
         background-color: #0B2C3C;
     }
 
-/* Accessibility */
-.sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-    }
-
 /* Breadcrumb */
 .breadcrumb {
     width: min(var(--container), 100%);
@@ -681,7 +682,7 @@ footer p {
         flex: 0 0 auto;
     }
 
-/* Product detail layout */
+/* Product detail page */
 .product-detail-page {
         display: flex;
         flex-direction: column;
@@ -816,22 +817,6 @@ footer p {
 .swatch-blue { background-color: #4A63C7; }
 .swatch-green { background-color: #63B144; }
 
-.swatch:hover {
-        border: 1.6px solid #000
-    }
-
-.swatch-orange:hover {
-        background-color: #E55839;
-    }
-
-.swatch-blue:hover {
-        background-color: #4A63C7;
-    }
-
-.swatch-green:hover {
-        background-color: #63B144;
-    }
-
 .swatch::after {
         content: attr(data-color);
         position: absolute;
@@ -851,6 +836,14 @@ footer p {
         transition: opacity 0.3s ease;
     }
 
+.swatch:hover {
+        border: 1.6px solid #000
+    }
+
+.swatch-orange:hover { background-color: #E55839; }
+.swatch-blue:hover { background-color: #4A63C7;}
+.swatch-green:hover { background-color: #63B144;}
+    
 .swatch:hover::after {
         opacity: 1;
     }
@@ -990,7 +983,7 @@ footer p {
     margin: 0 auto;
     background: var(--color-white);
     border-radius: var(--radius-m);
-    padding: 28px 30px 30px
+    padding: 28px 30px 30px;
 }
 
 .cart-title {
@@ -1158,6 +1151,7 @@ footer p {
         background: var(--color-accent-hover);
     }
 
+/* Cart badge (header component) */
 .cart-icon-wrap {
     position: relative;
     display: inline-flex;
@@ -1185,7 +1179,6 @@ footer p {
 .button-cart {
     position: relative;
 }
-
 
 .button-cart .button-cart-image {
     width: 20px;
@@ -1232,6 +1225,9 @@ footer p {
 .checkout-form {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
     }
 
 .checkout-section-title {
@@ -1284,8 +1280,8 @@ footer p {
         font-family: var(--font-heading);
         font-weight: 500;
         font-size: 0.9rem;
-        justify-self: start;
-        padding-left: 20px;
+        justify-self: end;
+        text-align: right;
     }
 
 .checkout-fields {
@@ -1298,7 +1294,7 @@ footer p {
         display: block;
         font-size: 0.78rem;
         margin: 0 0 6px;
-        color: rgba(11, 44, 60, 1)
+        color: rgba(11, 44, 60, 1);
 }
 
 .checkout-form input[type="text"],
@@ -1311,12 +1307,6 @@ footer p {
         background: #e9eef1;
         font-size: 0.82rem;
 }
-
-.two-col {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
 
 .checkout-fieldset {
         border: 0;
@@ -1369,7 +1359,6 @@ footer p {
 }
 
 .payment-fields {
-        margin-left: 22px;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -1381,7 +1370,7 @@ footer p {
         gap: 10px;
         margin-top: 14px;
         font-size: 0.78rem;
-        color: rgba(11, 44, 60, 0.85)
+        color: rgba(11, 44, 60, 0.85);
     }
 
 .checkbox-row input {
@@ -1408,6 +1397,8 @@ footer p {
         background: var(--color-accent-hover);
     }
 
+/* Checkout only tweaks */
+
 .page-checkout .header-inner {
         justify-content: center;
 }
@@ -1417,19 +1408,3 @@ footer p {
         text-align: center;
         flex-wrap: wrap;
 }
-.page-checkout .checkout-form {
-        width: 100%;
-        max-width: 560px;
-        margin: 0 auto;
-    }
-
-.page-checkout .order-summary {
-        width: 100%;
-        grid-template-columns: 110px 1fr auto;
-        align-items: start;
-    }
-
-.page-checkout .order-summary-price {
-        justify-self: end;
-        text-align: right;
-    }
