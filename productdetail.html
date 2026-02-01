@@ -49,22 +49,16 @@
                     </div>
 
                     <div class="product-thumbnails" aria-label="Product images">
-                        <button type="button" class="thumb is-active" aria-label="Show image 1">
-                        <img src="pictures/avalanche-pro-detail-1.png" alt="">
-                        </button>
-                        <button type="button" class="thumb" aria-label="Show image 2">
-                        <img src="pictures/avalanche-pro-detail-2.png" alt="">
-                        </button>
-                        <button type="button" class="thumb" aria-label="Show image 3">
-                        <img src="pictures/avalanche-pro-detail-3.png" alt="">
-                        </button>
-                        </div>
+                        <img class="thumb" src="pictures/avalanche-pro-detail-1.png" alt="Avalanche Pro Jacket detail view 1">
+                        <img class="thumb" src="pictures/avalanche-pro-detail-2.png" alt="Avalanche Pro Jacket detail view 2">
+                        <img class="thumb" src="pictures/avalanche-pro-detail-3.png" alt="Avalanche Pro Jacket detail view 3">
                     </div>
+                </div>
 
                 <div class="product-details">
                     <h1 id="product-title">Avalanche Pro</h1>
                     <div class="product-meta">
-                    <p class="product-price">2795 kr</p>
+                    <p class="product-price">2 795 kr</p>
 
                     <div class="product-rating" aria-label="4 out of 5 stars, 67 reviews">
                         <span class="star" aria-hidden="true">★★★★☆</span>
@@ -77,9 +71,9 @@
                     <div class="option-block">
                         <p class="option-label">Color:</p>
                         <div class="swatches" role="group" aria-label="Choose color">
-                            <button type="button" class="swatch swatch-orange" aria-label="Orange"></button>
-                            <button type="button" class="swatch swatch-blue" aria-label="Blue"></button>
-                            <button type="button" class="swatch swatch-green" aria-label="Green"></button>
+                            <button type="button" class="swatch swatch-orange" aria-label="Orange" data-color="Orange"></button>
+                            <button type="button" class="swatch swatch-blue" aria-label="Blue" data-color="Blue"></button>
+                            <button type="button" class="swatch swatch-green" aria-label="Green" data-color="Green"></button>
                         </div>
                     </div>
 
@@ -122,7 +116,7 @@
         <section class="recommendations" aria-labelledby="recommendations-title">
             <h2 id="recommendations-title">You may also like</h2>
 
-            <div class="products-grid recommendations-grid">
+            <div class="product-grid recommendations-grid">
                 <a href="productdetail.html" class="product-tile">
                     <article class="product-card">
                         <img src="pictures/timberline-fleece.png" alt="Timberline Fleece Jacket">
@@ -156,6 +150,17 @@
         </section>
         </main>
 
+                <section class="newsletter" aria-labelledby="newsletter-title">
+                    <h2 id="newsletter-title">Stay dry. Stay inspired.</h2>
+                    <p>Join our newsletter for outdoor stories, new arrivals and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <label class="sr-only" for="email">Email</label>
+                        <input id="email" type="email" placeholder="you@example.com" required>
+                        <button type="submit" class="cta-button">Subscribe</button>
+                    </form>
+                </section>
+            </main>
+            
         <footer>
             <img src="pictures/RainyDays_Logo.png" alt="Rainy Days Logo" class="footer-logo">
                 <div class="footer-content">
@@ -169,10 +174,10 @@
                         </ul>
                     </div>
                     <div>
-                        <h3>Help & Support</h3>
+                        <h3>Help &amp; Support</h3>
                         <ul class="footer-links">
-                        <li>Shipping & delivery</li>
-                        <li>Returns & Refunds</li>
+                        <li>Shipping &amp; delivery</li>
+                        <li>Returns &amp; Refunds</li>
                         <li>Size guide</li>
                         <li>FAQ</li>
                         </ul>
@@ -180,17 +185,17 @@
                     <div>
                         <h3>Contact</h3>
                         <ul class="footer-links">
-                        <li>hello@rainydays.com</li>
-                        <li>+47 400 00 000</li>
+                        <li><a href="mailto:hello@rainydays.com">hello@rainydays.com</a></li>
+                        <li><a href="tel:+4740000000">+47 400 00 000</a></li>
                         <li>Rainy Days HQ, Oslo, Norway</li>
                         </ul>
                     </div>
                     <div>
                         <h3>Follow us</h3>
                         <ul class="footer-links">
-                        <li><img src="../icons/instagram-icon.png" alt="Instagram Icon" class="social-icon">Instagram</li>
-                        <li><img src="../icons/facebook-icon.png" alt="Facebook Icon" class="social-icon">Facebook</li>
-                        <li><img src="../icons/tiktok-icon.png" alt="TikTok Icon" class="social-icon">TikTok</li>
+                        <li><img src="icons/instagram-icon.png" alt="" aria-hidden="true" class="social-icon">Instagram</li>
+                        <li><img src="icons/facebook-icon.png" alt="" aria-hidden="true" class="social-icon">Facebook</li>
+                        <li><img src="icons/tiktok-icon.png" alt="" aria-hidden="true" class="social-icon">TikTok</li>
                     </ul>
                     </div>
                 </div>
@@ -203,3 +208,4 @@
           </div>
         </footer>
     </body>
+</html>
