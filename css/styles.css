@@ -1401,7 +1401,7 @@ footer p {
         background: var(--color-accent-hover);
     }
 
-/* Checkout only tweaks */
+/* Checkout & confirmation layout tweaks */
 
 .page-checkout .header-inner,
 .page-confirmation .header-inner {
@@ -1413,3 +1413,78 @@ footer p {
         text-align: center;
         flex-wrap: wrap;
 }
+
+/* Confirmation page */
+.confirmation {
+    width: min(var(--container), 100%);
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirmation-card {
+        width: min(900px, 100%);
+        background: var(--color-white);
+        border-radius: var(--radius-m);
+        padding: 50px clamp(24px, 6vw, 90px);
+        text-align: center;
+    }
+
+.confirmation-title {
+        font-size: 2.6rem;
+        margin: 0 0 30px;
+        color: #000;
+    }
+
+.confirmation-icon {
+        width: 220px;
+        height: 220px;
+        margin: 0 auto 40px;
+        display: grid;
+        place-items: center;
+    }
+
+.confirmation-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+.confirmation-text {
+        margin: 0 0 8px;
+        font-family: var(--font-heading);
+        font-weight: 600;
+}
+
+.confirmation-subtext {
+        margin: 0;
+        font-family: var(--font-heading);
+        font-weight: 600;
+    }
+
+.confirmation-home-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        height: 60px;
+        padding: 0 56px;
+        min-width: 320px;
+        border-radius: 8px;
+        background: #12455E;
+        color: var(--color-white);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 1.05rem;
+        letter-spacing: 0.4px;
+}
+
+.confirmation-home-button:hover {
+        background: #0B2C3C;
+    }
+
