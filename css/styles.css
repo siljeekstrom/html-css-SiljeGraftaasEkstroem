@@ -33,8 +33,9 @@
     --color-text: #0B2C3C;
     --color-white: #ffffff;
 
-    --color-accent: #FF6B35;
-    --color-accent-hover: #D33C05;
+    --color-accent: #D14601;
+    --color-accent-hover: rgb(143, 48, 0);
+    --color-accent-active: rgb(88, 24, 0);
 
     --container: 1100px;
 
@@ -162,6 +163,11 @@ button:hover {
         background-color: var(--color-white);
     }
 
+.button:active {
+    background-color: var(--color-accent-active);
+    color: var(--color-white);
+}
+
 .header-buttons {
         padding-top: 55px;
         width: auto;
@@ -244,6 +250,12 @@ a:focus-visible, button:focus-visible {
 .cta-button:hover,
 .hero-shop-button:hover {
         background: var(--color-accent-hover);
+    }
+
+.cta-button:active,
+.hero-shop-button:active {
+        background: var(--color-accent-active);
+        color: var(--color-white);
     }
 
 .hero-shop-button {
@@ -389,6 +401,11 @@ a:focus-visible, button:focus-visible {
 
 .product-button:hover {
     background-color: #0B2C3C;
+}
+
+.product-button:active {
+    background-color: #031822;
+    color: var(--color-white);
 }
 
 /* New badge (product card) */
@@ -561,6 +578,11 @@ a:focus-visible, button:focus-visible {
 .newsletter .cta-button:hover {
         background-color: #0B2C3C;
     }
+
+.newsletter .cta-button:active {
+    background-color: #031822;
+    color: var(--color-white);
+}
 
 /* Breadcrumb */
 .breadcrumb {
@@ -909,6 +931,11 @@ footer p {
     background-color: var(--color-accent-hover);
 }
 
+.add-to-cart:active {
+    background-color: var(--color-accent-active);
+    color: var(--color-white);
+}
+
 /* Shipping/returns list */
 .info-list {
         display: flex;
@@ -1162,6 +1189,11 @@ footer p {
         background: var(--color-accent-hover);
     }
 
+.checkout-button:active {
+        background: var(--color-accent-active);
+        color: var(--color-white);
+    }
+
 /* Cart badge (header component) */
 .cart-icon-wrap {
     position: relative;
@@ -1408,6 +1440,11 @@ footer p {
         background: var(--color-accent-hover);
     }
 
+.checkout-submit:active {
+        background: var(--color-accent-active);
+        color: var(--color-white);
+    }
+
 /* Checkout & confirmation layout tweaks */
 
 .page-checkout .header-inner,
@@ -1493,5 +1530,10 @@ footer p {
 
 .confirmation-home-button:hover {
         background: #0B2C3C;
+    }
+
+.confirmation-home-button:active {
+        background: #031822;
+        color: var(--color-white);
     }
 
