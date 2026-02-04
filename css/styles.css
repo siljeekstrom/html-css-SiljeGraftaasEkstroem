@@ -915,6 +915,11 @@ footer p {
         background: #767676;
     }
 
+    .size:focus,
+    .size:active {
+        color: var(--color-text);
+    }
+
 .add-to-cart {
     width: 100%;
     display: block;
