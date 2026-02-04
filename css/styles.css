@@ -1240,6 +1240,11 @@ footer p {
         padding-bottom: 60px;
     }
 
+.page-checkout .breadcrumb {
+    justify-content: center;
+    text-align: center;
+}
+
 .checkout-hero {
         text-align: center;
         margin-top: 8px;
