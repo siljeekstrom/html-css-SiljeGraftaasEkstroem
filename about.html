@@ -9,25 +9,38 @@
     </head>
     <body>
         <header>
-            <div class="header-inner">
-            <a href="index.html" class="logo"><img src="pictures/RainyDays_Logo.png" alt="Rainy Days Logo"></a>
-            <nav aria-label="Primary Navigation">
+            <div class="header-inner header-inner--mobile">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+            <a href="index.html" class="logo">
+                <img src="pictures/RainyDays_Logo.png" alt="Rainy Days Logo">
+            </a>
+
+            <nav class="main-nav" aria-label="Primary Navigation">
                 <ul class="nav-links">
                     <li><a href="products.html">Shop</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+
             <div class="header-buttons">
                 <button type="button" class="button-icon button-search">
                     Search
                     <img src="icons/search-icon.png" alt="" aria-hidden="true" class="button-icon-image"></button>
+                    
                <a href="cart.html" class="button-icon button-cart"> 
                     Cart
                     <img src="icons/cart-icon.png" alt="" aria-hidden="true" class="button-icon-image"></a>
             </div>
             </div>
         </header>
+        
         <main>
             <h1> COMING SOON</h1>   
         </main>
