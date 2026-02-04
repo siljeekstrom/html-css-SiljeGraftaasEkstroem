@@ -2017,24 +2017,34 @@ footer p {
     }
 
     /* Checkout page */
-    .order-summary {
-        grid-template-columns: 90px 1fr;
-        grid-template-areas:
-            "img info"
-            "price price";
-        gap: 10px;
+    .checkout-card {
+        overflow: hidden;
     }
-
-    .order-summary-image {
-        grid-area: img;
+    .order-summary {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        gap: 10px;
+        align-items: start;
+        width: 100%;
     }
 
     .order-summary-info {
-        grid-area: info;
+        min-width: 0;
+    }
+
+    .order-summary-name,
+    .order-summary-meta {
+        overflow-wrap: anywhere;
     }
 
     .order-summary-price {
-        grid-area: price;
-        justify-self: start;
+        grid-column: 1 / -1;
+        justify-self: end;
         text-align: right;
+        white-space: nowrap;
+        margin-top: 6px;
+    }
+
+    .order-summary-image img {
+        height: 70px;
     }
