@@ -2015,3 +2015,26 @@ footer p {
         height: 48px;
         margin: 15px 0 15px;
     }
+
+    /* Checkout page */
+    ,.order-summary {
+        grid-template-columns: 90px 1fr;
+        grid-template-areas:
+            "img info"
+            "price price";
+        gap: 10px;
+    }
+
+    .order-summary-image {
+        grid-area: img;
+    }
+
+    .order-summary-info {
+        grid-area: info;
+    }
+
+    .order-summary-price {
+        grid-area: price;
+        justify-self: start;
+        text-align: right;
+    }
