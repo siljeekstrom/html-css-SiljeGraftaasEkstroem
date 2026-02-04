@@ -53,10 +53,16 @@
 
         <div class="checkout-fields">
             <div class="field-group">
-                <label for="first-name">Full name</label>
+                <span class="field-label">Full name</span>
                 <div class="two-col">
+                    <div class="field-item">
+                    <label for="first-name" class="sr-only">First name</label>
                     <input id="first-name" name="first-name" type="text" placeholder="First name" autocomplete="given-name" required>
+                    </div>
+                    <div class="field-item">
+                    <label for="last-name" class="sr-only">Last name</label>
                     <input id="last-name" name="last-name" type="text" placeholder="Last name" autocomplete="family-name" required>
+                    </div>
                 </div>
             </div>
 
@@ -71,10 +77,16 @@
         </div>
 
         <div class="field-group">
-            <label>Postal code</label>
+            <span class="field-label">Postal code and city</span>
             <div class="two-col">
+                <div class="field-item">
+                    <label for="postal" class="sr-only">Postal code</label>
                 <input id="postal" name="postal" type="text" placeholder="e.g. 1234" autocomplete="postal-code" required>
+                </div>
+                <div class="field-item">
+                    <label for="city" class="sr-only">City</label>
                 <input id="city" name="city" type="text" placeholder="City" autocomplete="address-level2" required>
+            </div>
             </div>
         </div>
 
