@@ -2019,12 +2019,12 @@ footer p {
     /* Checkout page */
     .page-checkout .checkout-card {
         padding: 24px 18px;
-        overflow: hidden;
     }
 
     .page-checkout .order-summary {
         display: grid;
         grid-template-columns: 90px minmax(0, 1fr) auto;
+        grid-template-rows: auto auto;
         gap: 10px;
         align-items: start;
         width: 100%;
@@ -2032,17 +2032,35 @@ footer p {
 
     .page-checkout .order-summary-name,
     .page-checkout .order-summary-meta {
-        overflow-wrap: anywhere;
+        margin: 0;
+    }
+
+    .page-checkout .order-summary-meta {
+        margin-top: 2px;
     }
 
     .page-checkout .order-summary-price {
+        grid-column: 3;
+        grid-row: 1;
         justify-self: end;
         align-self: start;
+        margin: 0;
         white-space: nowrap;
-        margin-top: 2px;
     }
 
     .page-checkout .order-summary-image img {
         height: 70px;
     }
+
+    .page-checkout .order-summary-image {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .page-checkout .order-summary-info {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        min-width: 0;
+    }
+
 }
