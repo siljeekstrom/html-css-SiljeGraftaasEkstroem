@@ -1574,26 +1574,60 @@ footer p {
     }
 }
 
-/* =========768px and down============ */
-@media (max-width: 768px) {
+/* =========945px and down============ */
+@media (max-width: 945px) {
     /* Header */
-    body < header {
-        min min-height: 120px;
+    html, body {
+        overflow-x: hidden;
+    }
+
+    body > header {
+        min-height: 120px;
     }
 
     .header-inner {
-        height: 120px;
+        height: 140px;
         padding: 16px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: 
+            "logo nav buttons";
+        align-items: center;
         gap: 12px;
     }
 
+    .logo {
+        grid-area: logo;
+    }
+
     .logo img {
-        height: 80px;
-        width: auto;
+        height: 100px;
+        width: 180px;
+    }
+
+    .header-buttons {
+        grid-area: buttons;
+        padding-top: 0; 
+        gap: 8px;
+        display: flex;
+    }
+
+    header nav {
+        grid-area: nav;
+        display: flex;
+        justify-content: center;
+        min-width: 0;
     }
 
     .nav-links {
-        gap: 30px;
+        gap: 22px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        justify-content: center;
+    }
+
+    header nav a {
+        font-size: 1.2rem;
     }
 
     header nav li,
@@ -1601,15 +1635,46 @@ footer p {
         padding-top: 0;
     }
 
+    .button-icon {
+        height: 40px;
+        padding: 8px 12px;
+        font-size: 1rem;
+        gap: 8px;
+        white-space: nowrap;
+    }
+
+    .button-icon-image {
+        width: 20px;
+        height: 20px;
+    }
+
+    .button-search {
+        width: 120px;
+    }
+
+    .button-cart {
+        width: 120px;
+    }
+
     /* Hero */
     .hero {
         height: 520px;
-        padding: 0px 30px;
+        padding: 0px 24px;
         background-position: center;
     }
 
     .hero-content {
-        max-width: 520px;
+        max-width: 460px;
+    }
+
+    .hero h1 {
+        font-size: 1.7rem;
+        line-height: 1.2;
+    }
+
+    .hero-shop-button {
+        font-size: 1.6rem;
+        padding: 12px 22px;
     }
 
     /* Index: New Arrivals */
@@ -1626,6 +1691,11 @@ footer p {
         height: 220px;
     }
 
+    .category-card--hiking img { object-position: 50% 35%; }
+    .category-card--city img { object-position: 50% 40%; }
+    .category-card--ski img { object-position: 50% 25%; }
+    .category-card--camping img { object-position: 50% 70%; }
+    
     .category-card span {
         font-size: 1.4rem;
     }
