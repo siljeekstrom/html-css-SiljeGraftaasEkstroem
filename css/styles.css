@@ -641,6 +641,8 @@ footer h3 {
         margin: 0 0 10px;
         font-family: var(--font-heading);
         font-size: 1.1em;
+        font-weight: 700;
+        letter-spacing: 0.3px;
     }
 
 footer a {
@@ -675,13 +677,13 @@ footer a:focus {
 .footer-links {
         list-style-type: none;
         padding: 0;
-        margin: 0;
+        margin: 6px 0 0;
     }
 
 .footer-links li {
-        font-family: var(--font-heading);
+        font-family: var(--font-body);
         font-size: 0.95em;
-        font-weight: 260;
+        font-weight: 300;
         margin-bottom: 5px;
         display: flex;
         align-items: center;
