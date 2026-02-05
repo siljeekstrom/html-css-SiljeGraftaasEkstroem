@@ -1583,8 +1583,8 @@ footer p {
     }
 }
 
-/* =========768px and down============ */
-@media (max-width: 768px) {
+/* =========945px and down============ */
+@media (max-width: 945px) {
     /* Header */
     html, body {
         overflow-x: hidden;
