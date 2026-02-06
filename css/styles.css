@@ -1808,6 +1808,7 @@ footer p {
     .page-confirmation .logo {
         grid-area: logo;
         justify-self: center;
+    }
 }
 
 /* =========520px and down============ */
@@ -1817,17 +1818,32 @@ footer p {
         min-height: 120px;
     }
 
-    .header-inner--mobile {
-        position: relative;
+    .header-inner.header-inner--mobile {
+        width: 100%;
+        margin: 0;
         height: 120px;
+        min-height: 120px;
         padding: 14px 16px;
         display: grid;
-        grid-template-columns: 88px 1fr 88px;
+        grid-template-columns: 44px 1fr 88px;
+        grid-template-areas: "burger logo buttons";
         align-items: center;
         gap: 10px;
     }
 
-    .header-inner--mobile .logo {
+    .header-inner.header-inner--mobile .nav-toggle-label {
+        grid-area: burger;
+        display: grid;
+        place-items: center;
+    }
+
+    .header-inner.header-inner--mobile .header-buttons {
+        grid-area: buttons;
+        justify-self: end;
+    }
+
+    .header-inner.header-inner--mobile .logo {
+        grid-area: logo;
         justify-self: center;
     }
 
@@ -2252,5 +2268,4 @@ footer p {
         grid-row: 1 / span 2;
         min-width: 0;
     }
-
 }
