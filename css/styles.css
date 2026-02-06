@@ -1962,7 +1962,7 @@ footer p {
         display: block;
         padding: 12px 10px;
         border-radius: 10px;
-        background: rgba(255, 255, 255, 0.45)
+        background: transparent
     }
 
     .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
