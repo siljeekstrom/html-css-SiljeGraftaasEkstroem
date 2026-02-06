@@ -763,6 +763,7 @@ footer p {
         background: var(--color-white);
         border-radius: var(--radius-m);
         padding: 34px;
+        margin-bottom: 30px;
 }
 
 .product-detail-grid {
@@ -1710,7 +1711,7 @@ footer p {
 
     /* Index: New Arrivals */
     .new-arrivals .product-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     /* Categories */
@@ -1986,6 +1987,10 @@ footer p {
         padding: 18px;
     }
 
+    .new-arrivals .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .category-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 14px;
@@ -2229,5 +2234,46 @@ footer p {
         grid-column: 2;
         grid-row: 1 / span 2;
         min-width: 0;
+    }
+
+    /* Confirmation page */
+    .confirmation-icon {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 14px;
+    }
+
+    .confirmation-title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .confirmation-text, 
+    .confirmation-subtext {
+        font-size: 0.8rem;
+    }
+
+    .confirmation-card {
+        padding: 28px 18px;
+    }
+
+    .confirmation-home-button {
+        width: 100%;
+        min-width: 0;
+        height: 52px;
+        margin-top: 18px;
+        padding: 0 16px;
+        font-size: 0.95rem;
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+    }
+
+    .page-confirmation .condirmation {
+        padding-bottom: 16px;
+    }
+
+    .page-confirmation footer {
+        margin-top: 20px;
     }
 }
