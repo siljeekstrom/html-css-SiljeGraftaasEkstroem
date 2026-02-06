@@ -1583,8 +1583,8 @@ footer p {
     }
 }
 
-/* =========945px and down============ */
-@media (max-width: 945px) {
+/* =========768px and down============ */
+@media (max-width: 768px) {
     /* Header */
     html, body {
         overflow-x: hidden;
@@ -1775,11 +1775,39 @@ footer p {
 
     .new-arrivals,
     .categories,
-    .newsletter {
+    .newsletter,
+    .product-detail,
+    .recommendations,
+    .cart-container,
+    .products-container,
+    .breadcrumb,
+    .checkout-card,
+    .confirmation {
         width: calc(100% - 50px);
         margin-left: auto;
         margin-right: auto;
     }
+
+    .page-checkout .header-inner,
+    .page-confirmation .header-inner {
+        grid-template-columns: 1fr;
+        grid-template-areas: "logo";
+        justify-items: center;
+        align-items: center;
+        min-height: 120px;
+    }
+
+    .page-checkout header nav,
+    .page-confirmation header nav,
+    .page-checkout .header-buttons,
+    .page-confirmation .header-buttons {
+        display: none;
+    }
+
+    .page-checkout .logo,
+    .page-confirmation .logo {
+        grid-area: logo;
+        justify-self: center;
 }
 
 /* =========520px and down============ */
