@@ -2050,6 +2050,15 @@ footer p {
     .new-arrivals .product-grid {
         grid-template-columns: 1fr;
     }
+
+    .new-arrivals .cta-button {
+        white-space: nowrap;
+        font-size: 1.05rem;
+        padding: 12px 18px;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
     
     .category-grid {
         grid-template-columns: repeat(2, 1fr);
