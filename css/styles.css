@@ -1584,37 +1584,19 @@ footer p {
 /* =========1024px and down============ */
 @media (max-width: 1024px) {
     .hero {
-        padding: 0px 80px;
-        background-position: center;
+        padding-inline: clamp(24px, 10vw, 200px);
+        background-position: 90% center;
     }
 
     .header-inner {
-        height: auto;
-        min-height: 120px;
-        padding: 20px 40px 15px 40px;
-        display: grid;
+        padding: var(--space-2);
+        display: flex;
+        height: 140px;
         grid-template-columns: auto 1fr auto;
         grid-template-areas: "logo nav buttons";
-        align-items: end;
-        gap: 12px;
-    }
-
-    .logo {
-        grid-area: logo;
-        align-self: center;
-    }
-
-    .header-buttons {
-        grid-area: buttons;
-        gap: 8px;
-        display: flex;
         align-items: center;
-    }
-
-    header nav {
-        grid-area: nav;
-        display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        gap: 20px;
     }
 
     .nav-links {
@@ -1651,11 +1633,40 @@ footer p {
     }
 }
 
-/* =========768px and down============ */
-@media (max-width: 768px) {
+/* =========840px and down============ */
+@media (max-width: 840px) {
     /* Header */
     header nav {
         min-width: 0;
+    }
+
+    .header-inner {
+        height: auto;
+        min-height: 120px;
+        padding: 20px 24px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "logo nav buttons";
+        align-items: end;
+        gap: 12px;
+    }
+
+    .logo {
+        grid-area: logo;
+        align-self: center;
+    }
+
+    header nav {
+        grid-area: nav;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-buttons {
+        grid-area: buttons;
+        gap: 8px;
+        display: flex;
+        align-items: center;
     }
 
     .nav-links {
@@ -1784,6 +1795,110 @@ footer p {
     }
 }
 
+/* =========657px and down (switch to hambuger)============ */
+@media (max-width: 657px) {
+    .header-inner {
+        height: auto;
+        min-height: 120px;
+        padding: 14px 16px;
+        display: grid;
+        grid-template-columns: 44px 1fr 44px;
+        grid-template-areas: "burger logo buttons";
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        grid-area: logo;
+        justify-self: center;
+        margin-inline: auto;
+    }
+
+    .header-buttons {
+        grid-area: buttons;
+        justify-self: end;
+    }
+
+    .nav-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+
+    .nav-toggle-label {
+        grid-area: burger;
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        border-radius: 999px;
+        cursor: pointer;
+    }
+
+    .nav-toggle-label span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: var(--color-text);
+        border-radius: 2px;
+    }
+
+    .nav-toggle-label span + span {
+        margin-top: 3px;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        right: 0;
+        background: var(--color-header);
+        border-top: 1px solid rgba(11, 44, 60, 0.12);
+        padding: 14px 16px 18px;
+        z-index: 1000;
+    }
+
+    .nav-toggle:checked ~ .main-nav {
+        display: block;
+    }
+
+    .main-nav .nav-links {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .main-nav .nav-links a {
+        display: block;
+        padding: 12px 10px;
+        border-radius: 10px;
+    }
+
+    .nav-toggle-label span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: var(--color-text);
+        border-radius: 2px;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+        transform: translate(7px) rotate(45deg) ;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+        transform: translate(-7px) rotate(-45deg);
+    }
+}
+
 /* =========520px and down============ */
 @media (max-width: 520px) {
     /* Header */
@@ -1875,51 +1990,8 @@ footer p {
         font-size: 0.75rem;
     }
 
-    .nav-toggle {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        white-space: nowrap;
-    }
-
-    .nav-toggle-label {
-        width: 44px;
-        height: 44px;
-        display: grid;
-        place-items: center;
-        border-radius: 999px;
-        cursor: pointer;
-    }
-
-    .nav-toggle-label span {
-        display: block;
-        width: 22px;
-        height: 2px;
-        background-color: var(--color-text);
-        border-radius: 2px;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
     .nav-toggle-label span + span {
         margin-top: 2px;
-    }
-
-    .main-nav {
-        display: none;
-        position: absolute;
-        top: 120px;
-        left: 0;
-        right: 0;
-        background: var(--color-header);
-        border-top: 1px solid rgba(11, 44, 60, 0.12);
-        padding: 14px 16px 18px;
-        z-index: 1000;
-    }
-
-    .nav-toggle:checked ~ .main-nav {
-        display: block;
     }
 
     .main-nav .nav-links {
@@ -1936,18 +2008,6 @@ footer p {
         padding: 12px 10px;
         border-radius: 10px;
         background: transparent
-    }
-
-    .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
-        transform: translate(7px) rotate(45deg) ;
-    }
-
-    .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
-        transform: translate(-7px) rotate(-45deg);
     }
 
     /* Breadcrumb */
@@ -2269,11 +2329,11 @@ footer p {
         justify-content: center;
     }
 
-    .page-confirmation .condirmation {
-        padding-bottom: 16px;
+    .page-confirmation .confirmation {
+        padding: 20px 16px 20px;
     }
 
     .page-confirmation footer {
-        margin-top: 20px;
+        margin-top: 24px;
     }
 }
