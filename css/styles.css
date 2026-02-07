@@ -296,28 +296,10 @@ a:focus-visible, button:focus-visible {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
         position: relative;
         z-index: 1;
         padding: 26px 34px;
     }
-
-.hero-content::before {
-        content: "";
-        position: absolute;
-        inset: -40px -60px -40px -60px;
-        background: radial-gradient(
-            120% 120% at 50% 50%,
-            rgba(0, 0, 0, 0.75) 0%,
-            rgba(0, 0, 0, 0.20) 35%,
-            rgba(0, 0, 0, 0.10) 55%,
-            rgba(0, 0, 0, 0) 75%
-        );
-        filter: blur(14px);
-        transform: translateZ(0);
-        pointer-events: none;
-        z-index: -1;
-}
 
 .hero h1 {
         color: var(--color-white);
