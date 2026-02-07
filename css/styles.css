@@ -257,20 +257,35 @@ a:focus-visible, button:focus-visible {
         background-size: cover;
         background-position: 90% center;
         background-repeat: no-repeat;
+        position: relative;
     }
+
+.hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            90deg,
+            rgba(0,0,0,0.55) 0%,
+            rgba(0,0,0,0.25) 45%,
+            rgba(0,0,0,0.0) 70%
+            );
+}
 
 .hero-content {
         max-width: 520px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        position: relative;
+        z-index: 1;
     }
 
 .hero h1 {
         color: var(--color-white);
         font-size: 2rem;
         font-weight: 600;
-        text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+        text-shadow: 0px 3px 12px rgba(0, 0, 0, 0.55);
     }
 
 /* CTA */
@@ -1691,7 +1706,7 @@ footer p {
     .nav-toggle-label span {
         display: block;
         width: 22px;
-        height: 2px;
+        height: 3px;
         background-color: var(--color-text);
         border-radius: 2px;
     }
@@ -1921,6 +1936,14 @@ footer p {
         justify-content: center;
         background-position: 70% center;
     }
+
+    .hero::before {
+        background: linear-gradient(
+            180deg,
+            rgba(0,0,0,0.55) 0%,
+            rgba(0,0,0,0.25) 45%,
+            rgba(0,0,0,0.0) 70%
+            );
 
     .hero-content {
         max-width: 340px;
