@@ -84,6 +84,67 @@ h1, h2, h3 {
     margin-right: auto;
 }
 
+/* Simple pages (contact, about) */
+.simple-page {
+    width: min(var(--container), calc(100% - var(--page-gutter)));
+    margin: 30px auto 0;
+}
+
+.coming-soon-card {
+    background: var(--color-white);
+    border-radius: var(--radius-m);
+    padding: 50px clamp(20px, 5vw, 70px);
+    text-align: center;
+}
+
+.coming-soon-card h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    font-size: 2.3rem;
+}
+
+.coming-soon-card p {
+    margin: 0 auto;
+    max-width: 52ch;
+    line-height: 1.8;
+    color: rgba(11, 44, 60, 0.8);
+}
+
+.coming-soon-actions {
+    margin-top: 26px;
+    display: inline-flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Secondary button for simple pages */
+.ghost-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    border-radius: var(--radius-m);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: var(--color-text);
+    background: transparent;
+    border: 2px solid rgba(11, 44, 60, 0.35);
+}
+
+.ghost-button:hover {
+    border-color: rgba(11, 44, 60, 0.6);
+    background: rgba(11, 44, 60, 0.06);
+}
+
+.ghost-button:active {
+    background: rgba(11, 44, 60, 0.12);
+}
+
 /* Utilities / Helpers */
 .sr-only {
         position: absolute;
