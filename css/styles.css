@@ -2,7 +2,7 @@
 @font-face {
     font-family: "Montserrat";
     src: url(../fonts/Montserrat-Medium.ttf) format("truetype");
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -298,7 +298,7 @@ a:focus-visible, button:focus-visible {
         text-shadow: 5px 3px 12px rgba(0, 0, 0, 0.90);
     }
 
-/* CTA */
+/* CTA buttons */
 .cta-button,
 .hero-shop-button {
         background: var(--color-accent);
@@ -361,7 +361,7 @@ a:focus-visible, button:focus-visible {
         letter-spacing: 0.5px;
     }
 
-/* Products (grid + cards) */
+/* Product cards (shared) */
 .product-grid {
         display: grid;
         gap: 18px;
@@ -497,7 +497,7 @@ a:focus-visible, button:focus-visible {
     color: #832D02;
 }
 
-/* Products page layout */
+/* Products page (layout) */
 .products-container {
     background: var(--color-white);
     border-radius: var(--radius-m);
@@ -527,7 +527,7 @@ a:focus-visible, button:focus-visible {
     color: rgba(11, 44, 60, 0.8);
 }
 
-/* Products toolbar */
+/* Products page (toolbar) */
 .products-toolbar {
     display: flex;
     align-items: center;
@@ -1620,7 +1620,6 @@ footer p {
 @media (max-width: 1024px) {
     .hero {
         padding-inline: clamp(24px, 10vw, 200px);
-        background-position: 90% center;
     }
 
     .hero-content {
@@ -1801,9 +1800,26 @@ footer p {
 
     /* Hero */
     .hero {
-        height: 520px;
-        background-size: cover;
-        background-position: 30% 50%;
+        padding: 0 18px;
+        padding-top: 28px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .hero-content {
+        max-width: 340px;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 26px 34px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 18px;
+        white-space: nowrap;
     }
 
     /* Categories */
@@ -1913,49 +1929,8 @@ footer p {
     }
 }
 
-/* =========700px and down============ */
-@media (max-width: 700px) {
-    .hero {
-        height: 520px;
-        padding: 0px 18px;
-        padding-top: 28px;
-        align-items: flex-start;
-        justify-content: center;
-        background-position: 70% center;
-    }
-
-    .hero-content {
-        max-width: 340px;
-        margin: 0 auto;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-    }
-
-    .hero h1 {
-        font-size: 1.6rem;
-        line-height: 1.15;
-        margin-bottom: 14px;
-    }
-
-    .hero-shop-button {
-        font-size: 1.8rem;
-        padding: 14px 26px;
-        align-self: center;
-    }
-}
-
 /* =========540px and down============ */
 @media (max-width: 540px) {
-   .home {
-        margin-top: 0;
-        padding-top: 0;
-    }
-
-    .hero {
-        margin-top: 0;
-    }
-    
     .nav-toggle-label span + span {
         margin-top: 2px;
     }
@@ -2005,11 +1980,6 @@ footer p {
     }
 
     /* Products page */
-    .products-page .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-    }
-
     .product-card img {
         height: 170px;
     }
@@ -2019,36 +1989,13 @@ footer p {
         gap: 22px;
     }
 
-    .footer-content > div {
-        text-align: center;
-    }
-
-    .footer-logo {
-        height: 110px;
-        margin: 0 auto;
-        display: block;
-    }
-
     .footer-links li {
         gap: 8px;
     }
 
 /* Product detail page */
-    .product-detail {
-        padding: 20px;
-    }
-
-    .product-detail-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
     .product-main-img {
         height: 300px;
-    }
-
-    .product-thumbnails {
-        gap: 10px;
     }
 
     .product-thumbnails .thumb {
@@ -2060,18 +2007,8 @@ footer p {
         margin-bottom: 8px;
     }
 
-    .product-meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-    }
-
     .product-price {
         font-size: 1.4rem;
-    }
-
-    .sizes {
-        grid-template-columns: repeat(3, 1fr);
     }
 
     .size {
@@ -2175,17 +2112,11 @@ footer p {
     }
 
     .page-checkout .order-summary {
-        display: grid;
         grid-template-columns: 90px minmax(0, 1fr) auto;
         grid-template-rows: auto auto;
         gap: 10px;
         align-items: start;
         width: 100%;
-    }
-
-    .page-checkout .order-summary-name,
-    .page-checkout .order-summary-meta {
-        margin: 0;
     }
 
     .page-checkout .order-summary-meta {
