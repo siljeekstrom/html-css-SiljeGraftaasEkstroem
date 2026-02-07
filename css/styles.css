@@ -450,15 +450,6 @@ a:focus-visible, button:focus-visible {
     }
 
 /* Product link overlay */
-.product-card-link {
-    position: absolute;
-    display: block;
-    inset: 0;
-    z-index: 1;
-    border-radius: var(--radius-s);
-    cursor: pointer;
-}
-
 .product-button {
     position: relative;
     display: inline-block;
@@ -474,6 +465,7 @@ a:focus-visible, button:focus-visible {
     color: var(--color-white);
     text-decoration: none;
     font-weight: 600;
+    pointer-events: none;
 }
 
 .product-button:hover {
