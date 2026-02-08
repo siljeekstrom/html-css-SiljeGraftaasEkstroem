@@ -723,6 +723,7 @@ footer a:focus {
 .footer-logo {
         height: 130px;
         width: auto;
+        filter: invert(1) brightness(1.2);
     }
 
 .footer-content {
