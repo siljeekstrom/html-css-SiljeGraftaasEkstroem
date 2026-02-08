@@ -1922,6 +1922,25 @@ footer p {
     }
 }
 
+/* =========675px and down============ */
+@media (max-width: 675px) {
+    .cart-item-top {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .cart-item-name {
+        flex: 1 1 100%;
+        padding-bottom: 0;
+    }
+
+    .cart-item-price {
+        flex: 0 0 100%;
+        text-align: left;
+        white-space: normal;
+    }
+}
+
 /* =========540px and down============ */
 @media (max-width: 540px) {
     .nav-toggle-label span + span {
